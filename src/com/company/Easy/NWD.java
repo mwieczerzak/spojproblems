@@ -46,6 +46,8 @@ public class NWD {
             int b = sc.nextInt();
             System.out.println(nwd(a, b));
         }
+
+
     }
 
     public static int nwd(int a, int b) {
@@ -56,4 +58,18 @@ public class NWD {
         }
         return a;
     }
+
+    String ab = "ab";
+
+    final String a1 = "a";
+    final String b1 = "b";
+    final String result1 = a1 + b1;
+
+    String a2 = "a";
+    String b2 = "b";
+    String result2 = a2 + b2;
+
+    String result3 = "a" + "b";
+
+
 }
