@@ -32,7 +32,6 @@ import java.io.InputStreamReader;
  */
 
 public class Flamaster {
-
     public static void main(String[] args) throws IOException {
 
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));

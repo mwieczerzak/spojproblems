@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class SkarbFinder {
-
     public static void main(String[] args) throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -17,8 +16,8 @@ public class SkarbFinder {
 
         for (int testNumber = 0; testNumber < numberOfTests; testNumber++) {
             int numberOfTips = Integer.valueOf(reader.readLine());
-            int coordinate1 = 0;
-            int coordinate2 = 0;
+            int coordinateX = 0;
+            int coordinateY = 0;
 
             for (int tipNumber = 0; tipNumber < numberOfTips; tipNumber++) {
                 String inputTips = reader.readLine();
@@ -26,33 +25,33 @@ public class SkarbFinder {
 
                 switch (inputArray[0]) {
                     case "0":
-                        coordinate1 += Integer.parseInt(inputArray[1]);
+                        coordinateX += Integer.parseInt(inputArray[1]);
                         break;
                     case "1":
-                        coordinate1 -= Integer.parseInt(inputArray[1]);
+                        coordinateX -= Integer.parseInt(inputArray[1]);
                         break;
                     case "2":
-                        coordinate2 -= Integer.parseInt(inputArray[1]);
+                        coordinateY -= Integer.parseInt(inputArray[1]);
                         break;
                     case "3":
-                        coordinate2 += Integer.parseInt(inputArray[1]);
+                        coordinateY += Integer.parseInt(inputArray[1]);
                         break;
                     default:
                         System.out.println("Wrong coordinates");
                 }
             }
-            if (coordinate1 == 0 && coordinate2 == 0) {
+            if (coordinateX == 0 && coordinateY == 0) {
                 System.out.println("studnia");
             } else {
-                if (coordinate1 > 0) {
-                    System.out.println(0 + " " + coordinate1);
-                } else if (coordinate1 < 0) {
-                    System.out.println(1 + " " + Math.abs(coordinate1));
+                if (coordinateX > 0) {
+                    System.out.println(0 + " " + coordinateX);
+                } else if (coordinateX < 0) {
+                    System.out.println(1 + " " + Math.abs(coordinateX));
                 }
-                if (coordinate2 > 0) {
-                    System.out.println(3 + " " + coordinate2);
-                } else if (coordinate2 < 0) {
-                    System.out.println(2 + " " + Math.abs(coordinate2));
+                if (coordinateY > 0) {
+                    System.out.println(3 + " " + coordinateY);
+                } else if (coordinateY < 0) {
+                    System.out.println(2 + " " + Math.abs(coordinateY));
                 }
             }
         }
